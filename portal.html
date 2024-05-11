@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexori Portal</title>
+    <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    </style>
+</head>
+<body>
+    <h2>Dexori Portal</h2>
+    <form id="loginForm" action="#" method="post">
+        <label for="username">Account Name:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Access Key:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <span class="psw">Continue As <a href="guest.html">Guest</a></span>
+        <br><br>
+       <input type="submit" value="Login">
+    </form>
+
+    <script>
+        document.getElementById("loginForm").onsubmit = function() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            var credentials = {
+                "admin": "pencilabcd1",
+                "error": "aboutblank",
+                "run.file": "unknown.exe",
+                // Add more login credentials as needed
+            };
+
+            if (credentials.hasOwnProperty(username) && credentials[username] === password) {
+                switch (username) {
+                    case "admin":
+                        window.location.href = "/load/admin/load-circle.html";
+                        break;
+                    case "error":
+                        window.location.href = "/error.html";
+                        break;
+                    case "run.file":
+                        window.location.href = "/deleted-file/system.recovered/1/2/034k9dskd8lcm8iv1kijfi2344.html";
+                        break;
+                    // Add more cases for additional users
+                    default:
+                        alert("Invalid username or password.");
+                        break;
+                }
+                return false;
+            } else {
+                alert("Invalid username or password.");
+                return false;
+            }
+        };
+    </script>
+</body>
+</html>

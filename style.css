@@ -1,0 +1,31 @@
+body {
+  font-family: monospace;
+}
+
+.terminal {
+  width: 80%;
+  margin: 50px auto;
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+.input-line span {
+  margin-right: 5px;
+  color: #b079d2;
+}
+
+.input-line input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: calc(100% - 20px);
+}
